@@ -56,11 +56,7 @@ nav {
 .country-amount {
   font-family: 'Lato', sans-serif;
   text-align: center;
-}
-
-sub {
-  font-size: 10px;
-  line-height: 37px;
+  margin-bottom: 0.3rem;
 }
 
 .list-title {
