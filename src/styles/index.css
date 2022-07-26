@@ -1,3 +1,34 @@
+@import url('http://fonts.cdnfonts.com/css/gill-sans');
+                
+
 body {
   background-color: #5586e2;
+  font-family: 'Gill Sans', sans-serif;                                        
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .7rem;
+  background-color: #4369b2;
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding-top: 0.3rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.size {
+  width: 15px;
+  height: 15px;
 }
