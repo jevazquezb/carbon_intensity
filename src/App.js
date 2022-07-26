@@ -1,15 +1,16 @@
-// import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
+import RegionList from './components/region_list';
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<RegionList />} />
-          <Route path="/missions" element={<Region />} />
-        </Routes> */}
+          {/* <Route path="/missions" element={<Region />} /> */}
+        </Routes>
       </main>
     </>
   );
