@@ -1,10 +1,28 @@
-import greatBritain from '../images/great_britain.png';
+import React, { useEffect } from 'react';
+import {
+  useSelector,
+  useDispatch,
+} from 'react-redux';
+import { fetchNatEmAsync } from '../redux/country/country';
+import uk from '../images/great_britain.png';
 
 function Country() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchNatEmAsync());
+  }, []);
+
+  const carbonIntensity = useSelector((state) => state.country);
+  const { index, intensity } = carbonIntensity;
+
+  const displayIndex = () => `${index} gCO\u2082/KWH`;
+  const displayIntensity = () => `Intensity: ${intensity}`;
+
   return (
     <section className="country-cont">
       <img
-        src={greatBritain}
+        src={uk}
         className="map-size"
         alt="Great Britain map"
         title="Great Britain"
@@ -12,11 +30,8 @@ function Country() {
       <div>
         <h2 className="country-title">UNITED</h2>
         <h2 className="country-title">KINGDOM</h2>
-        <p className="country-amount">
-          263 gCO
-          <sub>2</sub>
-          /KWH
-        </p>
+        <p className="country-amount">{ displayIndex() }</p>
+        <p className="country-amount">{ displayIntensity() }</p>
       </div>
     </section>
   );
