@@ -47,10 +47,16 @@ nav {
   gap: 10vw;
 }
 
-.country-link {
+.region-link {
   position: absolute;
+}
+
+.region-link-icon {
   width: 20px;
   height: 20px;
+}
+
+.country-link {
   top: 0.5rem;
   right: 0.5rem;
 }
@@ -98,15 +104,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.region-link {
-  position: absolute;
-}
-
-.region-link-icon {
-  width: 20px;
-  height: 20px;
 }
 
 .region-img {
