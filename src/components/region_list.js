@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { fetchNatEmAsync } from '../redux/country/country';
-import { fetchSrcAsync } from '../redux/region/region';
+import { fetchIntAsync } from '../redux/region/region';
 import UK from '../images/great_britain.png';
 import NS from '../images/north_scotland.png';
 import SS from '../images/south_scotland.png';
@@ -141,7 +141,7 @@ function List() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchSrcAsync());
+    dispatch(fetchIntAsync());
   }, []);
 
   const regionsCarbon = useSelector((state) => state.region);
