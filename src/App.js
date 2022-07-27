@@ -9,8 +9,8 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<RegionList />} />
           <Route path="/region/:id" element={<RegionDetails />} />
+          <Route path="/" element={<RegionList />} />
         </Routes>
       </main>
     </>
