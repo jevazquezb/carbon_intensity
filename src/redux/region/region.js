@@ -29,7 +29,7 @@ const initialState = [];
 
 // Reducer
 const regionSlice = createSlice({
-  name: 'source',
+  name: 'intensity',
   initialState,
   extraReducers: {
     [fetchSrcAsync.fulfilled]: (state, action) => (
