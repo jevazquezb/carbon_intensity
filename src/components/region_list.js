@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import {
-  useSelector,
-  useDispatch,
-} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { fetchNatEmAsync } from '../redux/country/country';
@@ -67,9 +65,7 @@ function Country() {
 
 function Region({ region }) {
   let { name } = region;
-  const {
-    intensity,
-  } = region;
+  const { id, intensity } = region;
   const { forecast, index } = intensity;
 
   if (name === 'North Wales & Merseyside') name = 'North Wales';
@@ -121,11 +117,13 @@ function Region({ region }) {
 
   return (
     <li className="region-cell">
-      <Icon
-        icon="uil:arrow-circle-right"
-        color="white"
-        className="region-link"
-      />
+      <NavLink className="region-link" to={`/region/${id}`}>
+        <Icon
+          icon="uil:arrow-circle-right"
+          color="white"
+          className="region-link-icon"
+        />
+      </NavLink>
       <img
         src={dir(name)}
         alt={`${name} map`}
