@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 // Actions
-const FETCH_CARBON_SOURCE = 'capstone_3/region/FETCH_CARBON_SOURCE';
+const FETCH_REGION_INTENSITY = 'capstone_3/region/FETCH_REGION_INTENSITY';
 
 // URL
 const regionURL = 'https://api.carbonintensity.org.uk/regional';
 
 // Async function (Function Action Creator)
-const fetchSrcAsync = createAsyncThunk(
-  FETCH_CARBON_SOURCE,
+const fetchIntAsync = createAsyncThunk(
+  FETCH_REGION_INTENSITY,
   async () => {
     const response = await fetch(regionURL);
     const output = await response.json();
@@ -32,12 +32,12 @@ const regionSlice = createSlice({
   name: 'intensity',
   initialState,
   extraReducers: {
-    [fetchSrcAsync.fulfilled]: (state, action) => (
+    [fetchIntAsync.fulfilled]: (state, action) => (
       [...action.payload]
     ),
   },
 });
 
-export { fetchSrcAsync };
+export { fetchIntAsync };
 
 export default regionSlice.reducer;
