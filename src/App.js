@@ -9,7 +9,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<RegionList />} />
-          {/* <Route path="/missions" element={<Region />} /> */}
+          {/* <Route path="/region" element={<Region />} /> */}
         </Routes>
       </main>
     </>
