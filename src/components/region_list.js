@@ -24,6 +24,55 @@ import England from '../images/england.png';
 import Scotland from '../images/scotland.png';
 import Wales from '../images/wales.png';
 
+function displayCarbon(carbon) {
+  return carbon ? `${carbon} gCO\u2082/KWH` : 'N/A';
+}
+
+function displayIntensity(intensity) {
+  return intensity ? `Intensity: ${intensity}` : 'N/A';
+}
+
+function dir(name) {
+  switch (name) {
+    case 'North Scotland':
+      return NS;
+    case 'South Scotland':
+      return SS;
+    case 'North West England':
+      return NWE;
+    case 'North East England':
+      return NEE;
+    case 'Yorkshire':
+      return York;
+    case 'North Wales':
+      return NW;
+    case 'South Wales':
+      return SW;
+    case 'West Midlands':
+      return WM;
+    case 'East Midlands':
+      return EM;
+    case 'East England':
+      return EE;
+    case 'South West England':
+      return SWE;
+    case 'South England':
+      return SE;
+    case 'London':
+      return London;
+    case 'South East England':
+      return SEE;
+    case 'Scotland':
+      return Scotland;
+    case 'Wales':
+      return Wales;
+    case 'England':
+      return England;
+    default:
+      return UK;
+  }
+}
+
 function Country() {
   const dispatch = useDispatch();
 
@@ -34,19 +83,15 @@ function Country() {
   const carbonIntensity = useSelector((state) => state.country);
   const { index, intensity } = carbonIntensity;
 
-  const displayIndex = () => (
-    index ? `${index} gCO\u2082/KWH` : 'N/A'
-  );
-
-  const displayIntensity = () => `Intensity: ${intensity}`;
-
   return (
     <section className="country-cont">
-      <Icon
-        icon="uil:arrow-circle-right"
-        color="white"
-        className="country-link"
-      />
+      <NavLink className="region-link country-link" to={`/region/${18}`}>
+        <Icon
+          icon="uil:arrow-circle-right"
+          color="white"
+          className="region-link-icon"
+        />
+      </NavLink>
       <img
         src={UK}
         className="map-size"
@@ -56,8 +101,8 @@ function Country() {
       <div>
         <h2 className="country-title">UNITED</h2>
         <h2 className="country-title">KINGDOM</h2>
-        <p className="country-amount">{ displayIndex() }</p>
-        <p className="country-amount">{ displayIntensity() }</p>
+        <p className="country-amount">{ displayCarbon(index) }</p>
+        <p className="country-amount">{ displayIntensity(intensity) }</p>
       </div>
     </section>
   );
@@ -69,51 +114,6 @@ function Region({ region }) {
   const { forecast, index } = intensity;
 
   if (name === 'North Wales & Merseyside') name = 'North Wales';
-
-  const dir = (name) => {
-    switch (name) {
-      case 'North Scotland':
-        return NS;
-      case 'South Scotland':
-        return SS;
-      case 'North West England':
-        return NWE;
-      case 'North East England':
-        return NEE;
-      case 'Yorkshire':
-        return York;
-      case 'North Wales':
-        return NW;
-      case 'South Wales':
-        return SW;
-      case 'West Midlands':
-        return WM;
-      case 'East Midlands':
-        return EM;
-      case 'East England':
-        return EE;
-      case 'South West England':
-        return SWE;
-      case 'South England':
-        return SE;
-      case 'London':
-        return London;
-      case 'South East England':
-        return SEE;
-      case 'Scotland':
-        return Scotland;
-      case 'Wales':
-        return Wales;
-      default:
-        return England;
-    }
-  };
-
-  const displayIndex = () => (
-    index ? `${forecast} gCO\u2082/KWH` : 'N/A'
-  );
-
-  const displayIntensity = () => `Intensity: ${index}`;
 
   return (
     <li className="region-cell">
@@ -131,8 +131,8 @@ function Region({ region }) {
         className="region-img"
       />
       <h4 className="region-title">{name}</h4>
-      <p className="region-amount">{ displayIndex() }</p>
-      <p className="region-amount">{ displayIntensity() }</p>
+      <p className="region-amount">{ displayCarbon(forecast) }</p>
+      <p className="region-amount">{ displayIntensity(index) }</p>
     </li>
   );
 }
@@ -193,5 +193,7 @@ Region.propTypes = {
     })),
   }).isRequired,
 };
+
+export { dir, displayCarbon, displayIntensity };
 
 export default RegionList;
