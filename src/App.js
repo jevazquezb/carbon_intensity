@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import RegionList from './components/region_list';
+import RegionDetails from './components/region_details'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<RegionList />} />
-          {/* <Route path="/region" element={<Region />} /> */}
+          <Route path="/region/:id" element={<RegionDetails />} />
         </Routes>
       </main>
     </>
