@@ -40,6 +40,4 @@ const regionSlice = createSlice({
 
 export { fetchSrcAsync };
 
-// export const {} = intensitySlice.actions;
-
 export default regionSlice.reducer;
