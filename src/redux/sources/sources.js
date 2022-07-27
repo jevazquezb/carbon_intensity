@@ -16,7 +16,8 @@ const fetchSrcAsync = createAsyncThunk(
     const region = {
       id: regionRaw.regionid,
       name: regionRaw.shortname,
-      intensity: regionRaw.data[0].intensity,
+      forecast: regionRaw.data[0].intensity.forecast,
+      intensity: regionRaw.data[0].intensity.index,
       sources: regionRaw.data[0].generationmix,
     };
 
@@ -32,7 +33,7 @@ const sourceSlice = createSlice({
   initialState,
   extraReducers: {
     [fetchSrcAsync.fulfilled]: (state, action) => (
-      { ...action.payload }
+      { ...state, ...action.payload }
     ),
   },
 });
