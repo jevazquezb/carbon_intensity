@@ -102,6 +102,9 @@ nav {
 
 .region-link {
   position: absolute;
+}
+
+.region-link-icon {
   width: 20px;
   height: 20px;
 }
