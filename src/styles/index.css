@@ -1,19 +1,17 @@
 @import url('http://fonts.cdnfonts.com/css/gill-sans');
 @import url('https://fonts.googleapis.com/css2?family=Lato');
-                
 
 body {
   background-color: #5586e2;
   font-family: 'Gill Sans', sans-serif;
-  /* font-family: 'Lato', sans-serif; */
-  color: #fff;                                       
+  color: #fff;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .7rem;
+  padding: 0.7rem;
   background-color: #4369b2;
 }
 
@@ -111,17 +109,17 @@ nav {
   background-color: #4164a6;
 }
 
-.region-cell:nth-child(4n),
-.region-cell:nth-child(4n+1) {
-  background-color: #4268af;  
-}
-
 .region-cell {
   position: relative;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.region-cell:nth-child(4n),
+.region-cell:nth-child(4n+1) {
+  background-color: #4268af;
 }
 
 .region-img {
