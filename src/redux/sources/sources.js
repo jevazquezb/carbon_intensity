@@ -29,7 +29,7 @@ const initialState = {};
 
 // Reducer
 const sourceSlice = createSlice({
-  name: 'intensity',
+  name: 'sources',
   initialState,
   extraReducers: {
     [fetchSrcAsync.fulfilled]: (state, action) => (
