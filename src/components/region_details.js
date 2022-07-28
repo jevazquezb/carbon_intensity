@@ -73,7 +73,9 @@ function Sources({ sources }) {
 
   return (
     <section>
-      <h3 className="list-title">CARBON SOURCES</h3>
+      <div className="search-bar">
+        <h3 className="list-title">CARBON SOURCES</h3>
+      </div>
       <ul>
         { createList() }
       </ul>
