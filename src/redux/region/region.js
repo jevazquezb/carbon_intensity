@@ -18,7 +18,6 @@ const fetchIntAsync = createAsyncThunk(
       id: region.regionid,
       name: region.shortname,
       intensity: region.intensity,
-      sources: region.generationmix,
     }));
 
     return regions;
