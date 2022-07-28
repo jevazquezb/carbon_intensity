@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -137,6 +137,53 @@ function Region({ region }) {
   );
 }
 
+function SearchRegion({ regionList, searchRegion, regionInputHandler }) {
+  const nameList = regionList.map((region) => region.name);
+
+  const createDropList = (nameList) => {
+    let count = 0;
+    const list = nameList.map((name) => {
+      let regionName = name;
+      count += 1;
+      if (regionName === 'North Wales & Merseyside') regionName = 'North Wales';
+      return (
+        <option key={count}>{ regionName }</option>
+      );
+    });
+    return list;
+  };
+
+  return (
+    <div className="search-bar">
+      <h3 className="list-title">STATS BY REGION</h3>
+      <input
+        list="regions"
+        placeholder="Search region"
+        className="search"
+        value={searchRegion}
+        onChange={regionInputHandler}
+      />
+      <datalist id="regions">
+        { createDropList(nameList) }
+      </datalist>
+    </div>
+  );
+}
+
+function filterRegions(inputRegion, regionList) {
+  const [shownRegions, setShownRegions] = useState(regionList);
+
+  useEffect(() => {
+    const adjustedInput = inputRegion.toLowerCase().trim();
+    setShownRegions(regionList.filter((region) => {
+      const regionName = region.name.toLowerCase();
+      return regionName.includes(adjustedInput);
+    }));
+  }, [inputRegion]);
+
+  return shownRegions;
+}
+
 function List() {
   const dispatch = useDispatch();
 
@@ -146,12 +193,27 @@ function List() {
 
   const regionsCarbon = useSelector((state) => state.region);
 
-  const createList = () => {
-    const filteredList = regionsCarbon.filter((region) => (
-      region.name !== 'GB'
-    ));
+  const [searchRegion, setSearchRegion] = useState('');
 
-    const list = filteredList.map((region) => (
+  const UkLessList = regionsCarbon.filter((region) => (
+    region.name !== 'GB'
+  ));
+
+  const filteredRegions = filterRegions(searchRegion, UkLessList);
+
+  let displayRegion;
+  if (filteredRegions.length === 0) {
+    displayRegion = UkLessList;
+  } else {
+    displayRegion = filteredRegions;
+  }
+
+  const regionInputHandler = (e) => {
+    setSearchRegion(e.target.value);
+  };
+
+  const createList = (regionsArr) => {
+    const list = regionsArr.map((region) => (
       <Region
         region={region}
         key={region.id}
@@ -162,9 +224,13 @@ function List() {
 
   return (
     <section>
-      <h3 className="list-title">STATS BY REGION</h3>
+      <SearchRegion
+        regionList={UkLessList}
+        searchRegion={searchRegion}
+        regionInputHandler={regionInputHandler}
+      />
       <ul className="list-cont">
-        { createList() }
+        { createList(displayRegion) }
       </ul>
     </section>
   );
@@ -179,6 +245,19 @@ function RegionList() {
   );
 }
 
+SearchRegion.propTypes = {
+  regionList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    intensity: PropTypes.shape({
+      forecast: PropTypes.number,
+      index: PropTypes.string,
+    }),
+  })).isRequired,
+  searchRegion: PropTypes.string.isRequired,
+  regionInputHandler: PropTypes.func.isRequired,
+};
+
 Region.propTypes = {
   region: PropTypes.shape({
     id: PropTypes.number,
@@ -187,10 +266,6 @@ Region.propTypes = {
       forecast: PropTypes.number,
       index: PropTypes.string,
     }),
-    sources: PropTypes.arrayOf(PropTypes.shape({
-      fuel: PropTypes.string,
-      perc: PropTypes.number,
-    })),
   }).isRequired,
 };
 
