@@ -158,7 +158,7 @@ function SearchRegion({ regionList, searchRegion, regionInputHandler }) {
       <h3 className="list-title">STATS BY REGION</h3>
       <input
         list="regions"
-        placeholder="Search region"
+        placeholder="Search by region"
         className="search"
         value={searchRegion}
         onChange={regionInputHandler}
@@ -186,13 +186,10 @@ function filterRegions(inputRegion, regionList) {
 
 function List() {
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchIntAsync());
   }, []);
-
   const regionsCarbon = useSelector((state) => state.region);
-
   const [searchRegion, setSearchRegion] = useState('');
 
   const UkLessList = regionsCarbon.filter((region) => (
