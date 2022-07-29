@@ -17,5 +17,5 @@ describe('Navigate between components', () => {
     const returnLink = document.querySelector('.return-cont');
     fireEvent.click(returnLink);
     expect(document.body.textContent).toMatch(/South Wales/i);
-  });  
+  });
 });

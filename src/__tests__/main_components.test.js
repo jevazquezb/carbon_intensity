@@ -11,8 +11,8 @@ describe('Render main components correctly', () => {
     const ContHeader = () => {
       <Router>
         <Header />
-      </Router>
-    }
+      </Router>;
+    };
     const headerSnap = renderer.create(<ContHeader />).toJSON();
     expect(headerSnap).toMatchSnapshot();
   });
@@ -21,8 +21,8 @@ describe('Render main components correctly', () => {
     const ContRegionList = () => {
       <Router>
         <RegionList />
-      </Router>
-    }
+      </Router>;
+    };
     const regionListSnap = renderer.create(<ContRegionList />).toJSON();
     expect(regionListSnap).toMatchSnapshot();
   });
@@ -31,8 +31,8 @@ describe('Render main components correctly', () => {
     const ContRegionDetails = () => {
       <Router>
         <RegionDetails />
-      </Router>
-    }
+      </Router>;
+    };
     const regionDetailsSnap = renderer.create(<ContRegionDetails />).toJSON();
     expect(regionDetailsSnap).toMatchSnapshot();
   });
@@ -41,9 +41,9 @@ describe('Render main components correctly', () => {
     const ContApp = () => {
       <Router>
         <App />
-      </Router>
-    }
+      </Router>;
+    };
     const appSnap = renderer.create(<ContApp />).toJSON();
     expect(appSnap).toMatchSnapshot();
-  });  
+  });
 });

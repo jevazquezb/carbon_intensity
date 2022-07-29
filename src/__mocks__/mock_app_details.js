@@ -3,14 +3,12 @@ import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 import App from '../App';
 
-const MockAppDetails = () => {
-  return (
-    <Provider store={store}>
-      <Router initialEntries={['/region/13']}>
-        <App />
-      </Router>
-    </Provider>
-  );
-}
+const MockAppDetails = () => (
+  <Provider store={store}>
+    <Router initialEntries={['/region/13']}>
+      <App />
+    </Router>
+  </Provider>
+);
 
 export default MockAppDetails;

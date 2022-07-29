@@ -11,7 +11,7 @@ describe('Country reducer tests', () => {
       payload: { index: 305, intensity: 'high' },
     };
     const state = countryReducer(initialState, action);
-    expect(state).toEqual( { index: 305, intensity: 'high' } );
+    expect(state).toEqual({ index: 305, intensity: 'high' });
   });
 });
 
@@ -127,9 +127,9 @@ describe('Source reducer tests', () => {
   test('Gets new state when sourceReducer is fulfilled', () => {
     const initialState = [];
     const fetchedData = [
-      {fuel: 'nuclear', perc: 43.2},
-      {fuel: 'gas', perc: 55.6},
-      {fuel: 'wind', perc: 1},
+      { fuel: 'nuclear', perc: 43.2 },
+      { fuel: 'gas', perc: 55.6 },
+      { fuel: 'wind', perc: 1 },
     ];
     const action = {
       type: fetchCarbonAsync.fulfilled.type,
@@ -142,9 +142,9 @@ describe('Source reducer tests', () => {
   test('Match a property value when sourceReducer is fulfilled', () => {
     const initialState = [];
     const fetchedData = [
-      {fuel: 'gas', perc: 70.8},
-      {fuel: 'nuclear', perc: 15.6},
-      {fuel: 'coal', perc: 4.9},
+      { fuel: 'gas', perc: 70.8 },
+      { fuel: 'nuclear', perc: 15.6 },
+      { fuel: 'coal', perc: 4.9 },
     ];
     const action = {
       type: fetchCarbonAsync.fulfilled.type,
