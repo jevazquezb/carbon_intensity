@@ -117,7 +117,7 @@ function Region({ region }) {
 
   return (
     <li className="region-cell">
-      <NavLink className="region-link" to={`/region/${id}`}>
+      <NavLink data-testid={`det${id}`} className="region-link" to={`/region/${id}`}>
         <Icon
           icon="uil:arrow-circle-right"
           color="white"
