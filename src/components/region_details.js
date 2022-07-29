@@ -48,7 +48,7 @@ function SourceItem({ source }) {
       <Icon
         icon="uil:arrow-circle-right"
         color="white"
-        className="region-link-icon"
+        className="region-link-icon big-icon"
       />
     </li>
   );

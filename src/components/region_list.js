@@ -89,7 +89,7 @@ function Country() {
         <Icon
           icon="uil:arrow-circle-right"
           color="white"
-          className="region-link-icon"
+          className="region-link-icon big-icon"
         />
       </NavLink>
       <img
@@ -121,7 +121,7 @@ function Region({ region }) {
         <Icon
           icon="uil:arrow-circle-right"
           color="white"
-          className="region-link-icon"
+          className="region-link-icon big-icon"
         />
       </NavLink>
       <img
