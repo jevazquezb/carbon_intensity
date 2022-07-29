@@ -1,16 +1,29 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore: Use Redux in React components
+# Carbon Intensity in the UK
 
-> In this part of the project, we used Redux store to display books. Also, we added some UI elements to our components and made them *dispatch* actions.
+> This Single-Page Application (SPA) allows you to monitor carbon dioxide (CO<sub>2</sub>) emissions for each region of the UK and the nation itself. CO<sub>2</sub> emissions are updated every half hour. The App contains a search field for the user to quickly look up the region of interest. Also, it displays a details page for every region showing the CO<sub>2</sub> percentage contribution by energy source.
+
+<br>
+
+![screenshot](./src/images/screenshot_1.png)
+
+<br>
+
+![screenshot](./src/images/screenshot_2.png)
 
 ## Built With
 
-- CSS, JavaScript and React.
+- API.
+- CSS, JavaScript and React-Redux.
 - Linters.
-- GitHub.
+- Git and GitHub.
 
 ## Live Demo
+
+*Coming soon.*
+
+## Project presentation
 
 *Coming soon.*
 
@@ -24,8 +37,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-    1. git@github.com:jevazquezb/Bookstore.git
-    2. cd Bookstore
+    1. git@github.com:jevazquezb/Carbon_intensity.git
+    2. cd Carbon_intensity
 
 ### Install
 
@@ -51,7 +64,7 @@ Ready to work?⛏️ You're all set to explore and change the repo locally (on y
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jevazquezb/Bookstore/issues).
+Feel free to check the [issues page](https://github.com/jevazquezb/Carbon_intensity/issues).
 
 ## Show your support
 
@@ -59,6 +72,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- My fellow Micronauts.
 - Google and Stack Overflow.
 - Inspiration.
 - etc.
