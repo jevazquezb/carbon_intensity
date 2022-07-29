@@ -173,6 +173,7 @@ function SearchRegion({ regionList, searchRegion, regionInputHandler }) {
 function filterRegions(inputRegion, regionList) {
   const [shownRegions, setShownRegions] = useState(regionList);
 
+  // Any time the input changes.
   useEffect(() => {
     const adjustedInput = inputRegion.toLowerCase().trim();
     setShownRegions(regionList.filter((region) => {
