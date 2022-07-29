@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/carbon_intensity/static/css/main.610ed684.css",
+    "main.js": "/carbon_intensity/static/js/main.013debf7.js",
+    "static/media/great_britain.png": "/carbon_intensity/static/media/great_britain.d5cd1227fa0a030d63bd.png",
+    "static/media/scotland.png": "/carbon_intensity/static/media/scotland.7bf7fb0eaff9d78a58c6.png",
+    "static/media/england.png": "/carbon_intensity/static/media/england.f78d516b0c0e0dfe6767.png",
+    "static/media/north_scotland.png": "/carbon_intensity/static/media/north_scotland.ca85f8d18b6257675a0b.png",
+    "index.html": "/carbon_intensity/index.html",
+    "main.610ed684.css.map": "/carbon_intensity/static/css/main.610ed684.css.map",
+    "main.013debf7.js.map": "/carbon_intensity/static/js/main.013debf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.610ed684.css",
+    "static/js/main.013debf7.js"
+  ]
+}
