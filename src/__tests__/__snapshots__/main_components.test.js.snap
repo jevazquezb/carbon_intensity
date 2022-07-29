@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render main components correctly Render App component correctly 1`] = `null`;
+
+exports[`Render main components correctly Render Header component correctly 1`] = `null`;
+
+exports[`Render main components correctly Render RegionDetails component correctly 1`] = `null`;
+
+exports[`Render main components correctly Render RegionList component correctly 1`] = `null`;
