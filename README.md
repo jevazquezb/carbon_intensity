@@ -37,8 +37,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-    1. git@github.com:jevazquezb/Carbon_intensity.git
-    2. cd Carbon_intensity
+    1. git@github.com:jevazquezb/carbon_intensity.git
+    2. cd carbon_intensity
 
 ### Install
 
@@ -64,7 +64,7 @@ Ready to work?⛏️ You're all set to explore and change the repo locally (on y
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jevazquezb/Carbon_intensity/issues).
+Feel free to check the [issues page](https://github.com/jevazquezb/carbon_intensity/issues).
 
 ## Show your support
 
