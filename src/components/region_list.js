@@ -85,7 +85,7 @@ function Country() {
 
   return (
     <section className="country-cont">
-      <NavLink className="region-link country-link" to={`/region/${18}`}>
+      <NavLink className="region-link country-link" to={`/carbon_intensity/region/${18}`}>
         <Icon
           icon="uil:arrow-circle-right"
           color="white"
@@ -117,7 +117,7 @@ function Region({ region }) {
 
   return (
     <li className="region-cell">
-      <NavLink data-testid={`det${id}`} className="region-link" to={`/region/${id}`}>
+      <NavLink data-testid={`det${id}`} className="region-link" to={`/carbon_intensity/region/${id}`}>
         <Icon
           icon="uil:arrow-circle-right"
           color="white"

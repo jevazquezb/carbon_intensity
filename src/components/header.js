@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
   return (
     <header>
-      <NavLink className="return-cont" to="/">
+      <NavLink className="return-cont" to="/carbon_intensity">
         <Icon
           icon="eva:arrow-ios-back-fill"
           color="white"
