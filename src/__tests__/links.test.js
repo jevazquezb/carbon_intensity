@@ -16,6 +16,6 @@ describe('Navigate between components', () => {
     render(<MockAppDetails />);
     const returnLink = document.querySelector('.return-cont');
     fireEvent.click(returnLink);
-    expect(document.body.textContent).toMatch(/South Wales/i);
+    expect(document.body.textContent).toMatch(/south wales/i);
   });
 });

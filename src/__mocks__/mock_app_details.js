@@ -5,7 +5,7 @@ import App from '../App';
 
 const MockAppDetails = () => (
   <Provider store={store}>
-    <Router initialEntries={['/region/13']}>
+    <Router initialEntries={['/carbon_intensity/region/13']}>
       <App />
     </Router>
   </Provider>
