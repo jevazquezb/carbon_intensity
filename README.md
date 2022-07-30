@@ -21,11 +21,11 @@
 
 ## Live Demo
 
-*Coming soon.*
+[Live demo link.](https://jevazquezb.github.io/carbon_intensity)
 
 ## Project presentation
 
-*Coming soon.*
+*Coming soon*.
 
 ## Getting Started
 
