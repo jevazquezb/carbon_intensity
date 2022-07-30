@@ -25,7 +25,7 @@
 
 ## Project presentation
 
-[Project description video](https://www.loom.com/share/81407e5ec4c34a7f95f081e48cce3414)
+[Project description video](https://loom.com/share/178a466220e04cfe92a82193b6478c99)
 
 ## Getting Started
 
